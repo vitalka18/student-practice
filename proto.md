@@ -29,3 +29,35 @@
 		this.speed++;
 		alert( this.name + ' прыгает' );
 	};
+
+***
+
+	class Animal {
+	  constructor(name) {
+	    this.name = name;
+	  }
+
+	  run() {
+	    console.log(`run ${this.name}`);
+	  }
+	}
+
+	class Rabbit extends Animal {
+	  constructor(name) {
+	    super(name);
+	    this.canJump = true;
+	  }
+
+	  jump() {
+	    console.log('jump' + this.name);
+	  }
+	}
+
+	console.log(Animal);
+	console.log(Rabbit);
+
+	let cow = new Animal('cow');
+	console.log(cow);
+
+	let banni = new Rabbit('banni');
+	console.log(banni);
